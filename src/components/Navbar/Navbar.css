@@ -1,0 +1,43 @@
+.navbar {
+  height: 76px;
+  background: var(--bg-color1);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(11, 36, 28, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  font-family: var(--text-font1);
+  color: var(--text-color6);
+  font-weight: var(--font-weight2);
+}
+
+/* Lado Esquerdo: Ícone e Título da Marca */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo img{
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--bg-color3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-name {
+  font-weight: var(--font-weight1);
+  font-size: 17px;
+  letter-spacing: 0.01em;
+}
+
+/* Lado Direito: Botões */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

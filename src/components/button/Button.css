@@ -1,0 +1,57 @@
+/* Base do Botão (baseado no estilo da Pokko Edits) */
+.btn {
+  font-family: var(--text-font2);
+  font-size: var(--text-size1);
+  letter-spacing: 0.02em;
+  padding: 11px 20px;
+  border-radius: 100px; /* Formato pílula/capsule */
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px); /* Efeito de elevação leve ao passar o mouse */
+}
+
+.btn:active {
+  transform: scale(0.97); /* Micro-feedback ao clicar */
+}
+
+/* Ícones dentro dos botões */
+.btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Variantes de Cores do Projeto Original */
+
+/* 1. Botão Primario */
+.btn-primary {
+  background: var(--bnt-color1);
+  color: var(--text-color1);
+  border: 1.5px solid rgba(11, 36, 28, 0.25);
+}
+
+/* 2. Botão Secundario */
+.btn-secundary {
+  background: var(--bnt-color2);
+  color: var(--text-color2);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+}
+
+.btn-secundary:hover {
+  box-shadow: 0 8px 20px rgba(232, 67, 46, 0.35);
+}
+
+/* Variante Grande (Usada na Hero Section) */
+.btn-primary.large {
+  padding: 15px 28px;
+  font-size: 13.5px;
+}

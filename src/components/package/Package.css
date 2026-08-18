@@ -1,0 +1,100 @@
+.package {
+  padding: 100px 0;
+  background: var(--bg-color1);
+}
+
+.package .page-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Cabeçalho da Seção (Separação entre H2 na esquerda e P na direita) */
+.pkg-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pkg-header h2 {
+  font-size: clamp(30px, 3.6vw, 44px);
+  font-weight: var(--font-weight2);
+  color: var(--text-color6);
+}
+
+.pkg-header p {
+  font-family: var(--text-font1);
+  font-size: 12.5px;
+  color: rgba(11, 36, 28, 0.55);
+  max-width: 280px;
+  text-align: right;
+  margin-left: auto;
+}
+
+.pkg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 50px;
+}
+
+/* Base do Card */
+.pkg-card {
+  background: var(--bg-color4);
+  border-radius: 20px;
+  padding: 34px 28px;
+  border: 1.5px solid rgba(11, 36, 28, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.pkg-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Card em Destaque (Pacote Mensal) */
+.pkg-card.featured {
+  background: var(--bg-color2);
+  color: var(--text-color2);
+}
+
+.pkg-name {
+  font-family: var(--text-font1);
+  font-size: 12.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+/* Título de dentro do Card */
+.pkg-card-title {
+  font-size: 24px;
+  font-weight: 800;
+  font-family: var(--text-font2);
+}
+
+.pkg-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.8;
+  flex-grow: 1;
+}
+
+/* Alinhamento do botão no card */
+.pkg-card .btn {
+  align-self: flex-start;
+  margin-top: 6px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 880px) {
+  .pkg-grid {
+    grid-template-columns: 1fr;
+  }
+}

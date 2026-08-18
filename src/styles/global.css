@@ -1,0 +1,75 @@
+:root{
+  /* Background */
+  --bg-color1: #F5EAD9;
+  --bg-color2: #007F5F;
+  --bg-color3: #E8432E;
+  --bg-color4: #FBF6EE;
+  --bg-color5: #262688;
+  --bg-color6: #043D2E;
+
+  --box-shadow: 0 5px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --border-color: 1px solid #d9d9d9;
+  
+  /* Texto */
+  --text-font1: 'Inter';
+  --text-font2: 'Bricolage Grotesque';
+  --font-size1: 18px;
+  --font-size2: 12px;
+  --font-size3: 60px;
+  --font-weight1: 900;
+  --font-weight2: 900;
+  --text-color1: #000000;
+  --text-color2: #ffffff;
+  --text-color3: #000000;
+  --text-color4: #ffffff;
+  --text-color5: #007F5F;
+  --text-color6: #043D2E;
+  --text-color7: #E8432E;
+
+  /* Botão*/
+  --bnt-color1: #F5EAD9;
+  --bnt-color2: #E8432E;
+  --hover-color: #273264;
+}
+
+:root[data-theme="dark"] {
+  /* Background */
+  --bg-color1: #F5EAD9;
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color1);
+  color: var(--text-color1);
+  font-family: var(--text-font1);
+  line-height: 1.55;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.page-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px; /* Margem interna lateral */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Mantém o alinhamento esquerda/direita */
+}
+
+.page-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
