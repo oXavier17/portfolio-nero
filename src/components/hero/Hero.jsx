@@ -1,7 +1,10 @@
 import './Hero.css';
 import Button from '../button/Button';
+import { SITE_CONFIG } from '../../data/siteConfig';
 
 export default function Hero() {
+  const whatsappUrl = SITE_CONFIG.getWhatsappUrl('');
+
   return (
     <header className="hero">
       <div className="page-container">
@@ -18,8 +21,7 @@ export default function Hero() {
               Edição de vídeos verticais para criadores, marcas e profissionais que querem parar de rolar despercebidos no feed.
             </p>
             <div className="hero-ctas">
-              <Button variant="secundary" large>Falar no WhatsApp</Button>
-              <Button variant="primary">Ver portfólio</Button>
+              <Button variant="secundary" href={whatsappUrl}> WhatsApp </Button>
             </div>
           </div>
 
