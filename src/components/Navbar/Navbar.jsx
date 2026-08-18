@@ -3,6 +3,9 @@ import Button from '../button/Button';
 import Logo from '../../assets/logo.png'
 
 export default function Navbar() {
+  const numWhatsapp = '556492216099';
+  const msgWhatsapp = encodeURIComponent('Olá! Preciso de ajuda.');
+
   return (
     <nav className="navbar">
       <div className="page-container">
@@ -13,10 +16,9 @@ export default function Navbar() {
           <div className="nav-name">POKKO EDITS</div>
         </div>
 
-        {/* Lado Direito */}
         <div className="nav-right">
-          <Button variant="primary">Discord</Button>
-          <Button variant="secundary">WhatsApp</Button>
+          <Button variant="primary" href="https://discord.gg/SEU_CONVITE"> Discord </Button>
+          <Button variant="secundary" href={`https://wa.me/${numWhatsapp}?text=${msgWhatsapp}`}> WhatsApp </Button>
         </div>
       </div>
     </nav>

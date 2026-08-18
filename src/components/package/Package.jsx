@@ -10,7 +10,6 @@ export default function Package() {
         {/* Cabeçalho Ajustado (sem page-middle e com nova classe) */}
         <div className="pkg-header">
           <h2>Pacotes</h2>
-          <p className="mono">ESTRUTURA SUGERIDA — VALORES E FORMATOS SOB CONSULTA</p>
         </div>
 
         {/* Grid de Cards */}

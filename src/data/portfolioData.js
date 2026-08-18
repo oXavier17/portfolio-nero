@@ -3,45 +3,75 @@ export const portfolioCategories = [
     id: 'criadores',
     label: 'Criadores & Influenciadores',
     videos: [
-      { id: '01', caption: 'vídeo do Felipe Paiva' },
-      { id: '02', caption: 'vídeo de tal coisa' },
-      { id: '03', caption: 'vídeo do fulano' },
+      {
+        videoUrl: 'https://www.instagram.com/reels/DaDfp3QRGpZ/' // Exemplo Instagram
+      },
+      { 
+        videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4' // Exemplo de .mp4
+      },
+      { 
+        videoUrl: 'https://youtu.be/KIQzGYGPsL0?si=ZphvBgRX5CS02J-Z'
+      }
     ]
   },
   {
     id: 'podcast',
     label: 'Cortes de Podcast',
     videos: [
-      { id: '01', caption: 'corte do podcast X' },
-      { id: '02', caption: 'corte de tal episódio' },
-      { id: '03', caption: 'vídeo de tal coisa' },
+      {
+        videoUrl: 'https://youtu.be/KIQzGYGPsL0?si=ZphvBgRX5CS02J-Z'
+      },
+      { 
+        videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'
+      },
+      { 
+        videoUrl: 'https://youtu.be/KIQzGYGPsL0?si=ZphvBgRX5CS02J-Z'
+      }
     ]
   },
   {
     id: 'anime',
     label: 'Anime & Fandom',
     videos: [
-      { id: '01', caption: 'vídeo de tal anime' },
-      { id: '02', caption: 'vídeo do fulano' },
-      { id: '03', caption: 'vídeo de tal coisa' },
+      {
+        videoUrl: 'https://www.tiktok.com/@oxavier_17/video/7516640464720678149' // Exemplo Tiktok
+      },
+      { 
+        videoUrl: 'https://www.youtube.com/shorts/pk3kNebJxIg' // Exemplo Youtube Shorts
+      },
+      { 
+        videoUrl: 'https://www.tiktok.com/@oxavier_17/video/7501693457648340279'
+      }
     ]
   },
   {
     id: 'games',
     label: 'Games',
     videos: [
-      { id: '01', caption: 'vídeo de tal jogo' },
-      { id: '02', caption: 'vídeo do fulano' },
-      { id: '03', caption: 'vídeo de tal coisa' },
+      {
+        videoUrl: 'https://www.youtube.com/shorts/MGFgytiIqi0'
+      },
+      { 
+        videoUrl: 'https://www.youtube.com/shorts/I8MYR7Y150c'
+      },
+      { 
+        videoUrl: 'https://www.youtube.com/shorts/wf1AglOHoPc'
+      }
     ]
   },
   {
     id: 'educacional',
     label: 'Educacional & Profissionais',
     videos: [
-      { id: '01', caption: 'vídeo da psicóloga' },
-      { id: '02', caption: 'vídeo da economista' },
-      { id: '03', caption: 'vídeo de tal coisa' },
+      {
+        videoUrl: 'https://youtu.be/KIQzGYGPsL0?si=ZphvBgRX5CS02J-Z'
+      },
+      { 
+        videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4'
+      },
+      { 
+        videoUrl: 'https://youtu.be/KIQzGYGPsL0?si=ZphvBgRX5CS02J-Z'
+      }
     ]
   }
 ];
