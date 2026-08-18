@@ -8,7 +8,7 @@ export default function Button({
   ...props 
 }) {
   const variantClass = `btn-${variant}`;
-  const sizeClass = large ? 'laaaaaarge' : '';
+  const sizeClass = large ? 'large' : '';
 
   return (
     <button 
