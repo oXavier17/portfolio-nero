@@ -1,4 +1,4 @@
-:root{
+:root {
   /* Background */
   --bg-color1: #F5EAD9;
   --bg-color2: #007F5F;
@@ -32,12 +32,13 @@
   --bnt-color1: #F5EAD9;
   --bnt-color2: #E8432E;
   --hover-color: #273264;
-}
 
-:root[data-theme="dark"] {
-  /* Background */
-  --bg-color1: #F5EAD9;
-  
+  /* Celular / Mockups (Variáveis Globais de Mídia) */
+  --phone-border-color: var(--bg-color7); /* Borda escura do smartphone */
+  --phone-bg: #000000;                     /* Fundo do player */
+  --phone-radius: 22px;                    /* Arredondamento da tela */
+  --phone-border-width: 6px;               /* Espessura da borda do aparelho */
+  --phone-shadow: 0 30px 60px -20px rgba(2, 40, 32, 0.4); /* Sombra suave usando var de tom escuro */
 }
 
 * {
@@ -74,4 +75,29 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+/* ==========================================================================
+   MOCKUP REUTILIZÁVEL DE CELULAR (GLOBAL)
+   ========================================================================== */
+.phone-mockup {
+  aspect-ratio: 9/16;
+  border-radius: var(--phone-radius);
+  border: var(--phone-border-width) solid var(--phone-border-color);
+  background-color: var(--phone-bg);
+  box-shadow: var(--phone-shadow);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Regra global para ajustar GIFs, Vídeos ou Imagens dentro de um mockup de celular */
+.phone-mockup img,
+.phone-mockup video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }

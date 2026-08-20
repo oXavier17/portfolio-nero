@@ -1,8 +1,10 @@
 footer {
-  background: var(--bg-color3);
+  background: var(--bg-color3); /* Vermelho/Laranja marcante do Pokko Edits */
   color: var(--text-color2);
   padding: 100px 0 60px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Garante o alinhamento dos elementos em pilha centralizada */
@@ -14,18 +16,22 @@ footer .page-container {
 }
 
 .footer-header {
-  opacity: 0.75;
+  opacity: 0.85;
+  font-family: var(--text-font1);
   font-size: var(--font-size2);
+  font-weight: var(--font-weight2);
   margin-bottom: 18px;
   letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .footer-title {
-  font-size: var(--font-size3);
-  font-weight: 800;
+  font-size: clamp(32px, 5vw, var(--font-size3)); /* Responsivo para não quebrar no celular */
+  font-family: var(--text-font1);
+  font-weight: var(--font-weight1);
   line-height: 1.05;
   max-width: 720px;
-  margin: 0 auto 34px;
+  margin: 0 auto 36px;
   color: var(--text-color2);
 }
 
@@ -40,6 +46,24 @@ footer .page-container {
 .footer-foot {
   margin-top: 70px;
   font-family: var(--text-font1);
-  font-size: 12px;
+  font-size: var(--font-size2);
   opacity: 0.75;
+  letter-spacing: 0.02em;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 600px) {
+  footer {
+    padding: 70px 0 40px;
+  }
+
+  .footer-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .footer-foot {
+    margin-top: 50px;
+  }
 }

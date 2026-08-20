@@ -1,9 +1,10 @@
-/* Base do Botão (baseado no estilo da Pokko Edits) */
+/* Base do Botão */
 .btn {
   font-family: var(--text-font2);
-  font-size: var(--text-size1);
+  font-size: var(--font-size2); /* Corrigido de --text-size1 para var do global */
+  font-weight: var(--font-weight2);
   letter-spacing: 0.02em;
-  padding: 11px 20px;
+  padding: 11px 22px;
   border-radius: 100px; /* Formato pílula/capsule */
   text-decoration: none;
   display: inline-flex;
@@ -12,46 +13,76 @@
   gap: 8px;
   border: none;
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  white-space: nowrap;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 0.2s ease,
+              border-color 0.2s ease;
 }
 
 .btn:hover {
-  transform: translateY(-2px); /* Efeito de elevação leve ao passar o mouse */
+  transform: translateY(-2px); /* Elevação suave */
 }
 
 .btn:active {
-  transform: scale(0.97); /* Micro-feedback ao clicar */
+  transform: scale(0.97) translateY(0); /* Micro-feedback ao clicar */
 }
 
-/* Ícones dentro dos botões */
+/* Ícones dentro do botão */
 .btn svg {
   width: 16px;
   height: 16px;
   flex-shrink: 0;
+  fill: currentColor;
 }
 
-/* Variantes de Cores do Projeto Original */
+/* ==========================================================================
+   VARIANTES DE COR
+   ========================================================================== */
 
-/* 1. Botão Primario */
+/* 1. Primário (Bege / Claro) */
 .btn-primary {
-  background: var(--bnt-color1);
+  background-color: var(--bnt-color1);
   color: var(--text-color1);
-  border: 1.5px solid rgba(11, 36, 28, 0.25);
+  border: 1.5px solid rgba(11, 36, 28, 0.2);
 }
 
-/* 2. Botão Secundario */
+.btn-primary:hover {
+  background-color: var(--bg-color4);
+  border-color: rgba(11, 36, 28, 0.4);
+  box-shadow: 0 6px 16px rgba(11, 36, 28, 0.08);
+}
+
+/* 2. Secundário (Laranja/Vermelho do Pokko Edits) */
 .btn-secundary {
-  background: var(--bnt-color2);
+  background-color: var(--bnt-color2);
   color: var(--text-color2);
   border: 1.5px solid rgba(255, 255, 255, 0.25);
 }
 
 .btn-secundary:hover {
-  box-shadow: 0 8px 20px rgba(232, 67, 46, 0.35);
+  box-shadow: 0 8px 24px rgba(232, 67, 46, 0.35);
+  filter: brightness(1.05); /* Leve brilho mantendo a cor da marca */
 }
 
-/* Variante Grande (Usada na Hero Section) */
-.btn-primary.large {
-  padding: 15px 28px;
-  font-size: 13.5px;
+/* 3. Variante Esmeralda (Opcional, útil para CTAs Verdes) */
+.btn-emerald {
+  background-color: var(--bg-color2);
+  color: var(--text-color2);
+  border: 1.5px solid transparent;
+}
+
+.btn-emerald:hover {
+  box-shadow: 0 8px 24px rgba(0, 127, 95, 0.35);
+  background-color: var(--bg-color6);
+}
+
+/* ==========================================================================
+   TAMANHOS (SIZES)
+   ========================================================================== */
+
+.btn-large,
+.btn.large {
+  padding: 15px 30px;
+  font-size: var(--font-size1);
 }

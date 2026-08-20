@@ -1,7 +1,8 @@
 .navbar {
   height: 76px;
-  background: var(--bg-color1);
+  background: rgba(245, 234, 217, 0.85); /* var(--bg-color1) com transparência para o blur funcionar */
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 2px solid rgba(11, 36, 28, 0.08);
   position: sticky;
   top: 0;
@@ -9,7 +10,6 @@
   width: 100%;
   font-family: var(--text-font1);
   color: var(--text-color6);
-  font-weight: var(--font-weight2);
 }
 
 /* Lado Esquerdo: Ícone e Título da Marca */
@@ -19,25 +19,46 @@
   gap: 12px;
 }
 
-.nav-logo img{
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
-  background: var(--bg-color3);
+.nav-logo {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.nav-logo img {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  object-fit: cover; /* Garante que a logo não distorça */
+  display: block;
+}
+
 .nav-name {
   font-weight: var(--font-weight1);
-  font-size: 17px;
+  font-size: var(--font-size1); /* Usando a variável do seu global.css */
   letter-spacing: 0.01em;
+  color: var(--text-color6);
+  text-transform: uppercase;
 }
 
 /* Lado Direito: Botões */
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+}
+
+/* Ajuste Fino para Telas Pequenas */
+@media (max-width: 600px) {
+  .navbar {
+    height: 66px;
+  }
+
+  .nav-name {
+    font-size: 15px;
+  }
+
+  .nav-right {
+    gap: 8px;
+  }
 }
