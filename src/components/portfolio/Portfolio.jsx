@@ -18,7 +18,7 @@ export default function Portfolio() {
       return {
         type: 'iframe',
         platform: 'youtube',
-        src: `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0`
+        src: `https://www.youtube.com/embed/${videoId}?loop=1&playlist=${videoId}&controls=0`
       };
     }
 
@@ -40,6 +40,22 @@ export default function Portfolio() {
         type: 'iframe',
         platform: 'instagram',
         src: `${cleanUrl}embed/`
+      };
+    }
+
+    // Drive
+    if (url.includes('drive.google.com')) {
+      let videoId = '';
+      if (url.includes('/file/d/')) {
+        videoId = url.split('/file/d/')[1]?.split('/')[0];
+      } else if (url.includes('id=')) {
+        videoId = url.split('id=')[1]?.split('&')[0];
+      }
+
+      return {
+        type: 'iframe',
+        platform: 'drive',
+        src: `https://drive.google.com/file/d/${videoId}/preview`
       };
     }
 

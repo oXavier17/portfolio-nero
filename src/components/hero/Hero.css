@@ -69,11 +69,18 @@ header.hero {
   aspect-ratio: 9/16;
   border-radius: 22px;
   border: 6px solid var(--ink, #0B241C);
-  background: linear-gradient(160deg, var(--emerald, #007F5F) 0%, var(--emerald-dark, #043D2E) 100%);
+  background: #000;
   box-shadow: 0 30px 60px -20px rgba(11, 36, 28, 0.4);
-  display: flex;
-  align-items: flex-end;
-  padding: 14px;
+  overflow: hidden; /* Garante que o GIF respeite o border-radius do celular */
+  padding: 0; /* Zerado para o GIF encostar nas bordas pretas */
+}
+
+/* Imagem do GIF ou Vídeo cobrindo a tela do celular */
+.phone-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Corta e ajusta mantendo a proporção da tela */
+  display: block;
 }
 
 .phone .label {
@@ -96,7 +103,6 @@ header.hero {
   left: 190px;
   transform: rotate(5deg);
   z-index: 2;
-  background: linear-gradient(160deg, var(--red, #E8432E) 0%, var(--red-dark, #C4331F) 100%);
 }
 
 .phone.p3 {
@@ -104,7 +110,6 @@ header.hero {
   left: 70px;
   transform: rotate(-3deg);
   z-index: 3;
-  background: linear-gradient(160deg, #0B241C 0%, #000000 100%);
 }
 
 /* Responsividade */

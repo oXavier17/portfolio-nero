@@ -10,7 +10,7 @@ export const portfolioCategories = [
         videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4' // Exemplo de .mp4
       },
       { 
-        videoUrl: 'https://youtu.be/KIQzGYGPsL0?si=ZphvBgRX5CS02J-Z'
+        videoUrl: 'https://drive.google.com/file/d/1MB-bvMwUQazsz2rEwh52eXpxTKekCBMk/view' // Exemplo de drive (mudar o id)
       }
     ]
   },

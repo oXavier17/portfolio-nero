@@ -2,6 +2,11 @@ import './Hero.css';
 import Button from '../button/Button';
 import { SITE_CONFIG } from '../../data/siteConfig';
 
+// Importando os GIFs da pasta assets
+import gifPhone1 from '../../assets/gif1.gif';
+import gifPhone2 from '../../assets/gif2.gif';
+import gifPhone3 from '../../assets/gif3.gif';
+
 export default function Hero() {
   const whatsappUrl = SITE_CONFIG.getWhatsappUrl('');
 
@@ -28,13 +33,13 @@ export default function Hero() {
           {/* Lado Direito: Pilha de Celulares */}
           <div className="phone-stack">
             <div className="phone p1">
-              <div className="label">vídeo do fulano<br />#reels</div>
+              <img src={gifPhone1} alt="Preview de vídeo editado 1" className="phone-media" />
             </div>
             <div className="phone p2">
-              <div className="label">vídeo de tal coisa<br />#viral</div>
+              <img src={gifPhone2} alt="Preview de vídeo editado 2" className="phone-media" />
             </div>
             <div className="phone p3">
-              <div className="label">vídeo do fulano<br />#shorts</div>
+              <img src={gifPhone3} alt="Preview de vídeo editado 3" className="phone-media" />
             </div>
           </div>
         </div>
