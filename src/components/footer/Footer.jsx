@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-foot">
-          © {new Date().getFullYear()} Pokko Edits. Todos os direitos reservados.
+          © {new Date().getFullYear()} Feito por oXavier. Todos os direitos reservados.
         </div>
 
       </div>
